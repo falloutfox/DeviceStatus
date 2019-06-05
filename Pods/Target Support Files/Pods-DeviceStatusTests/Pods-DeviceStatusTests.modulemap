@@ -1,0 +1,6 @@
+framework module Pods_DeviceStatusTests {
+  umbrella header "Pods-DeviceStatusTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
