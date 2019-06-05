@@ -16,9 +16,14 @@
 		A81DF1D222A6E7AA00815622 /* DeviceStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DF1D122A6E7AA00815622 /* DeviceStatusTests.swift */; };
 		A8C307E322A6E97100E6FA1C /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C307E222A6E97100E6FA1C /* HistoryTableViewController.swift */; };
 		A8C307E522A6EA0D00E6FA1C /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C307E422A6EA0D00E6FA1C /* CurrentViewController.swift */; };
-		A8C307E722A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C307E622A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift */; };
 		A8D3DCD022A7061500397591 /* DeviceStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D3DCCF22A7061500397591 /* DeviceStatusManager.swift */; };
 		A8F0C66222A7C7FE00069260 /* UIDevice+hasNotch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0C66122A7C7FE00069260 /* UIDevice+hasNotch.swift */; };
+		A8F0C66622A7E90600069260 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0C66522A7E90600069260 /* DatabaseManager.swift */; };
+		A8F0C66822A7E96B00069260 /* WiFiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0C66722A7E96B00069260 /* WiFiData.swift */; };
+		A8F0C66B22A7E98000069260 /* BatteryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0C66A22A7E98000069260 /* BatteryData.swift */; };
+		A8F0C66D22A7E9A300069260 /* CellularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0C66C22A7E9A300069260 /* CellularData.swift */; };
+		A8F0C66F22A7F6C600069260 /* SnapshotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0C66E22A7F6C600069260 /* SnapshotData.swift */; };
+		A8F0C67122A80B8D00069260 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0C67022A80B8D00069260 /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +53,15 @@
 		A81DF1D322A6E7AA00815622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8C307E222A6E97100E6FA1C /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		A8C307E422A6EA0D00E6FA1C /* CurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
-		A8C307E622A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricStatusTableViewController.swift; sourceTree = "<group>"; };
 		A8D3DCCF22A7061500397591 /* DeviceStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusManager.swift; sourceTree = "<group>"; };
 		A8F0C65E22A7B58D00069260 /* DeviceStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceStatus.entitlements; sourceTree = "<group>"; };
 		A8F0C66122A7C7FE00069260 /* UIDevice+hasNotch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+hasNotch.swift"; sourceTree = "<group>"; };
+		A8F0C66522A7E90600069260 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		A8F0C66722A7E96B00069260 /* WiFiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiData.swift; sourceTree = "<group>"; };
+		A8F0C66A22A7E98000069260 /* BatteryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryData.swift; sourceTree = "<group>"; };
+		A8F0C66C22A7E9A300069260 /* CellularData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellularData.swift; sourceTree = "<group>"; };
+		A8F0C66E22A7F6C600069260 /* SnapshotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotData.swift; sourceTree = "<group>"; };
+		A8F0C67022A80B8D00069260 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		AA2741115E83BEB2674F478E /* Pods-DeviceStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceStatus/Pods-DeviceStatus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,8 +119,10 @@
 			children = (
 				A8F0C65E22A7B58D00069260 /* DeviceStatus.entitlements */,
 				A81DF1BA22A6E7AA00815622 /* AppDelegate.swift */,
-				A8F0C66422A7E5A000069260 /* Managers */,
 				A8F0C66322A7E58A00069260 /* Extensions */,
+				A8F0C67222A80B9300069260 /* Cells */,
+				A8F0C66922A7E97000069260 /* Models */,
+				A8F0C66422A7E5A000069260 /* Managers */,
 				A8C307E822A6EA3D00E6FA1C /* Table View Controllers */,
 				A81DF1C022A6E7AA00815622 /* Main.storyboard */,
 				A81DF1C322A6E7AA00815622 /* Assets.xcassets */,
@@ -134,7 +146,6 @@
 			children = (
 				A8C307E422A6EA0D00E6FA1C /* CurrentViewController.swift */,
 				A8C307E222A6E97100E6FA1C /* HistoryTableViewController.swift */,
-				A8C307E622A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift */,
 			);
 			path = "Table View Controllers";
 			sourceTree = "<group>";
@@ -151,8 +162,28 @@
 			isa = PBXGroup;
 			children = (
 				A8D3DCCF22A7061500397591 /* DeviceStatusManager.swift */,
+				A8F0C66522A7E90600069260 /* DatabaseManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A8F0C66922A7E97000069260 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8F0C66722A7E96B00069260 /* WiFiData.swift */,
+				A8F0C66A22A7E98000069260 /* BatteryData.swift */,
+				A8F0C66C22A7E9A300069260 /* CellularData.swift */,
+				A8F0C66E22A7F6C600069260 /* SnapshotData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A8F0C67222A80B9300069260 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A8F0C67022A80B8D00069260 /* HistoryTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BA03BBB5DA4D6D8C264BD408 /* Pods */ = {
@@ -379,10 +410,15 @@
 			files = (
 				A8C307E322A6E97100E6FA1C /* HistoryTableViewController.swift in Sources */,
 				A8C307E522A6EA0D00E6FA1C /* CurrentViewController.swift in Sources */,
-				A8C307E722A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift in Sources */,
+				A8F0C66822A7E96B00069260 /* WiFiData.swift in Sources */,
+				A8F0C66B22A7E98000069260 /* BatteryData.swift in Sources */,
 				A8F0C66222A7C7FE00069260 /* UIDevice+hasNotch.swift in Sources */,
 				A81DF1BB22A6E7AA00815622 /* AppDelegate.swift in Sources */,
 				A8D3DCD022A7061500397591 /* DeviceStatusManager.swift in Sources */,
+				A8F0C66622A7E90600069260 /* DatabaseManager.swift in Sources */,
+				A8F0C67122A80B8D00069260 /* HistoryTableViewCell.swift in Sources */,
+				A8F0C66F22A7F6C600069260 /* SnapshotData.swift in Sources */,
+				A8F0C66D22A7E9A300069260 /* CellularData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

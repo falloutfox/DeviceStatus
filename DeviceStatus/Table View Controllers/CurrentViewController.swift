@@ -126,6 +126,18 @@ class CurrentViewController: UIViewController {
 	}
 	
 	@IBAction func tapSnapshot() {
+		let batteryData = BatteryData()
+		batteryData.level = deviceStatusManager.batteryLevel
+		batteryData.state = deviceStatusManager.batteryState
 		
+		let wifiData = WiFiData()
+		wifiData.signalStrength = deviceStatusManager.wifiSignalStrength
+		
+		let cellularData = CellularData()
+		cellularData.strength = deviceStatusManager.cellularSignalStrength
+		
+		DatabaseManager.shared.takeSnapshot(battery: batteryData,
+											wifi: wifiData,
+											cell: cellularData)
 	}
 }
