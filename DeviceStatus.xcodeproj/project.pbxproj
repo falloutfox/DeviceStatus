@@ -18,6 +18,7 @@
 		A8C307E522A6EA0D00E6FA1C /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C307E422A6EA0D00E6FA1C /* CurrentViewController.swift */; };
 		A8C307E722A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C307E622A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift */; };
 		A8D3DCD022A7061500397591 /* DeviceStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D3DCCF22A7061500397591 /* DeviceStatusManager.swift */; };
+		A8F0C66222A7C7FE00069260 /* UIDevice+hasNotch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F0C66122A7C7FE00069260 /* UIDevice+hasNotch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		A8C307E422A6EA0D00E6FA1C /* CurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
 		A8C307E622A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricStatusTableViewController.swift; sourceTree = "<group>"; };
 		A8D3DCCF22A7061500397591 /* DeviceStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusManager.swift; sourceTree = "<group>"; };
+		A8F0C65E22A7B58D00069260 /* DeviceStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceStatus.entitlements; sourceTree = "<group>"; };
+		A8F0C66122A7C7FE00069260 /* UIDevice+hasNotch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+hasNotch.swift"; sourceTree = "<group>"; };
 		AA2741115E83BEB2674F478E /* Pods-DeviceStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceStatus/Pods-DeviceStatus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +107,10 @@
 		A81DF1B922A6E7AA00815622 /* DeviceStatus */ = {
 			isa = PBXGroup;
 			children = (
+				A8F0C65E22A7B58D00069260 /* DeviceStatus.entitlements */,
 				A81DF1BA22A6E7AA00815622 /* AppDelegate.swift */,
-				A8D3DCCF22A7061500397591 /* DeviceStatusManager.swift */,
+				A8F0C66422A7E5A000069260 /* Managers */,
+				A8F0C66322A7E58A00069260 /* Extensions */,
 				A8C307E822A6EA3D00E6FA1C /* Table View Controllers */,
 				A81DF1C022A6E7AA00815622 /* Main.storyboard */,
 				A81DF1C322A6E7AA00815622 /* Assets.xcassets */,
@@ -132,6 +137,22 @@
 				A8C307E622A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift */,
 			);
 			path = "Table View Controllers";
+			sourceTree = "<group>";
+		};
+		A8F0C66322A7E58A00069260 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8F0C66122A7C7FE00069260 /* UIDevice+hasNotch.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8F0C66422A7E5A000069260 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A8D3DCCF22A7061500397591 /* DeviceStatusManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		BA03BBB5DA4D6D8C264BD408 /* Pods */ = {
@@ -199,6 +220,17 @@
 				TargetAttributes = {
 					A81DF1B622A6E7AA00815622 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 0;
+							};
+							com.apple.HotspotConfiguration = {
+								enabled = 0;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					A81DF1CC22A6E7AA00815622 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -348,6 +380,7 @@
 				A8C307E322A6E97100E6FA1C /* HistoryTableViewController.swift in Sources */,
 				A8C307E522A6EA0D00E6FA1C /* CurrentViewController.swift in Sources */,
 				A8C307E722A6EA2B00E6FA1C /* HistoricStatusTableViewController.swift in Sources */,
+				A8F0C66222A7C7FE00069260 /* UIDevice+hasNotch.swift in Sources */,
 				A81DF1BB22A6E7AA00815622 /* AppDelegate.swift in Sources */,
 				A8D3DCD022A7061500397591 /* DeviceStatusManager.swift in Sources */,
 			);
